@@ -1,0 +1,154 @@
+:root {
+    --f7-bars-shadow-bottom-image: none;
+    --f7-searchbar-input-padding-horizontal: 24px;
+    --f7-navbar-margin: 12px;
+    --header-height: 112px;
+    --footer-height: 3em;
+}
+
+.avatar {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+}
+
+.navbar {
+    margin: var(--f7-searchbar-input-padding-horizontal) var(--f7-navbar-margin);
+    width: calc(100% - 2 * var(--f7-navbar-margin));
+    border-radius: var(--f7-navbar-margin);
+    overflow: hidden;
+    --f7-navbar-bg-color: #fff;
+}
+
+.dark .navbar {
+    --f7-navbar-bg-color: #000;
+}
+
+.navbar .title {
+    width: 100%;
+    margin: 0;
+}
+
+/* Limit resizable panel width */
+.panel {
+    max-width: 75vw;
+}
+
+/* Demo Color Themes */
+.demo-theme-picker {
+    cursor: pointer;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-sizing: border-box;
+    position: relative;
+}
+
+.demo-theme-picker .checkbox {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+}
+
+body{
+    display: none; /* displays when ready */
+}
+
+body.framework7-root {
+    display: flex;
+    flex-direction: column;
+    height:auto;
+}
+
+main {
+    width:98%;
+    margin: 0 auto;
+    overflow-y: auto;
+    min-height: calc(100vh - var(--footer-height) - var(--header-height));
+}
+
+.android main {
+    min-height: calc(100vh - var(--footer-height) - var(--header-height) - 56px);
+}
+
+main section{
+    margin-bottom: 2.5em;
+}
+
+main section .list{
+    margin: .5em 0;
+}
+
+main section h2{
+    margin: 0;
+}
+
+header{
+    flex-shrink: 0;
+}
+
+footer {
+    height: var(--footer-height);
+    flex-shrink: 0;
+}
+
+
+footer p {
+    margin-right: 1em;
+    font-weight: 300;
+    font-size: 90%;
+}
+
+.not-found-block {
+    padding: 1em;
+}
+
+/* to make pygal work with dark theme when included as a .svg
+<div class="container" align="left">
+    {{graph_data|safe}}
+</div>
+
+and
+
+    page = pages.get_or_404("status")
+    df = pd.read_csv('https://anvil.works/blog/img/plotting-in-python/uk-election-results.csv')
+
+    custom_style = Style(
+        colors=('#0343df', '#e50000', '#ffff14', '#929591'),
+        font_family='Roboto,Helvetica,Arial,sans-serif',
+        background='transparent',
+        plot_background='transparent',
+        label_font_size=14,
+    )
+
+    c = pygal.Bar(
+        title="UK Election Results",
+        style=custom_style,
+        y_title='Seats',
+        x_label_rotation=270,
+        no_prefix=True
+    )
+    c.add('Conservative', df['conservative'])
+    c.add('Labour', df['labour'])
+    c.add('Liberal', df['liberal'])
+    c.add('Others', df['others'])
+
+    c.x_labels = df['year']
+    graph_data = c.render(is_unicode=True)
+    return render_template("status_page.html", page=page, graph_data=graph_data)
+*/
+
+.dark g text, 
+.dark g text.title, 
+.dark g .legends .legend text
+{
+    fill: white;
+}
+
+.dark g .line,
+.dark g .axis .major.line,
+.dark g .axis .guide.line
+{
+    stroke: white;
+}
