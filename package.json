@@ -1,4 +1,6 @@
 {
+    "name":"salesucation.github.io",
+    "homepage":"https://salesucation.ca",
     "scripts":{
         "install":"pip install -r requirements.txt",
         "dev":"python app.py",
