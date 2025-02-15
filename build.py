@@ -10,12 +10,14 @@ def load(path, sitemap):
     res = client.get(path)
     if path.endswith("index"):
         path = path.replace("index", "")
+    else:
+        path += "/"
     try:
         os.makedirs(f"{os.getcwd()}/dist/{path}")
     except:
         pass
-    f = open(f"{os.getcwd()}/dist/{path}/index.html", "wb")
-    sitemap["urlset"].append({"url":{"loc": f"/{path}/index.html"}})
+    f = open(f"{os.getcwd()}/dist/{path}index.html", "wb")
+    sitemap["urlset"].append({"url":{"loc": f"/{path}index.html"}})
     f.write(res.data)  
     f.close()
 
