@@ -1,11 +1,11 @@
 # salesucation.github.io
-## serverless flask template for sales engineers (and the [website](https://salesucation.com))
+## serverless flask template for sales engineers (and the [website](https://salesucation.ca))
 
 TLDR;
 
 ```bash
 
-pip install -r requirements.txt
-python -m flask run --host=0.0.0.0
+npm install
+npm run dev
 
 ```

@@ -30,3 +30,6 @@ def page(path):
         return render_template(template, articles=latest[:10], page=page, languages=languages)
     else:
         return render_template(template, page=page)
+
+if __name__ == '__main__':
+    app.run()
