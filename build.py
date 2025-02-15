@@ -2,6 +2,7 @@ from app import app, pages
 import os
 import shutil
 import json
+import xml.etree.ElementTree as ET
 
 client = app.test_client();
 
@@ -28,9 +29,12 @@ for page in pages:
 fin = open(f"{os.getcwd()}/package.json")
 oPackage = json.load(fin)
 fin.close()
-f = open(f"{os.getcwd()}/dist/sitemap.xml", "w")
-f.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset>')
+XML = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset>';
 for url in sitemap["urlset"]:
-    f.write(f"<url><loc>{oPackage["homepage"]}{url["url"]["loc"]}</loc></url>");
-f.write("</urlset>")  
+    XML += f"<url><loc>{oPackage["homepage"]}{url["url"]["loc"]}</loc></url>"
+XML += "</urlset>"
+element = ET.XML(XML)
+ET.indent(element)
+f = open(f"{os.getcwd()}/dist/sitemap.xml", "w")
+f.write(ET.tostring(element, encoding='unicode'))
 f.close()
