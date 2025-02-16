@@ -24,6 +24,12 @@ window.addEventListener('load', function () {
         }
     });
     //
+    const oForm = document.querySelector("form");
+    oForm.addEventListener("submit", function(){
+        const url = new URL(location);
+        url.searchParams.set("s", oForm.querySelector("input").value);
+        history.pushState({}, "", url);
+    })
     if(!this.localStorage.getItem("cookies_accepted")){
         this.localStorage.setItem("cookies_accepted", new Date().toLocaleString());
         const cookieMessage = app.sheet.create(
