@@ -3,6 +3,7 @@ import os
 import shutil
 import json
 import xml.etree.ElementTree as ET
+import urllib.parse;
 
 client = app.test_client();
 
@@ -39,4 +40,8 @@ element = ET.XML(XML)
 ET.indent(element)
 f = open(f"{os.getcwd()}/dist/sitemap.xml", "w")
 f.write(ET.tostring(element, encoding='unicode'))
+f.close()
+parsed_url = urllib.parse.urlparse(oPackage["homepage"])
+f = open(f"{os.getcwd()}/dist/CNAME", "w")
+f.write(parsed_url.netloc)
 f.close()
