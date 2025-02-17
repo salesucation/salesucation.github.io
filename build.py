@@ -24,7 +24,7 @@ def load(path, sitemap):
     except:
         pass
     f = open(f"{os.getcwd()}/dist/{path}index.html", "wb")
-    sitemap["urlset"].append({"url":{"loc": f"/{path}index.html"}})
+    sitemap["urlset"].append({"url":{"loc": f"/{path}"}})
     f.write(res.data)  
     f.close()
 
