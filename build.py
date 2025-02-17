@@ -11,6 +11,12 @@ def load(path, sitemap):
     res = client.get(path)
     if path.endswith("index"):
         path = path.replace("index", "")
+    elif path == "404":
+        f = open(f"{os.getcwd()}/dist/404.html", "wb")
+        sitemap["urlset"].append({"url":{"loc": f"/404.html"}})
+        f.write(res.data)  
+        f.close()
+        return
     else:
         path += "/"
     try:
