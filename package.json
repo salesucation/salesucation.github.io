@@ -4,6 +4,6 @@
     "scripts":{
         "install":"pip install -r requirements.txt",
         "dev":"python app.py",
-        "build": "python build.py"
+        "build": "python build.py && npx diy-pwa index dist"
     }
 }
