@@ -1,23 +1,23 @@
-<ns0:urlset xmlns:ns0="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <ns0:url>
-    <ns0:loc>https://salesucation.ca/index.html</ns0:loc>
-  </ns0:url>
-  <ns0:url>
-    <ns0:loc>https://salesucation.ca/fr/environ/index.html</ns0:loc>
-  </ns0:url>
-  <ns0:url>
-    <ns0:loc>https://salesucation.ca/fr/index.html</ns0:loc>
-  </ns0:url>
-  <ns0:url>
-    <ns0:loc>https://salesucation.ca/en/japan/index.html</ns0:loc>
-  </ns0:url>
-  <ns0:url>
-    <ns0:loc>https://salesucation.ca/en/about/index.html</ns0:loc>
-  </ns0:url>
-  <ns0:url>
-    <ns0:loc>https://salesucation.ca/en/pamphlet/index.html</ns0:loc>
-  </ns0:url>
-  <ns0:url>
-    <ns0:loc>https://salesucation.ca/en/index.html</ns0:loc>
-  </ns0:url>
-</ns0:urlset>
+<urlset>
+  <url>
+    <loc>https://salesucation.ca/index.html</loc>
+  </url>
+  <url>
+    <loc>https://salesucation.ca/fr/environ/index.html</loc>
+  </url>
+  <url>
+    <loc>https://salesucation.ca/fr/index.html</loc>
+  </url>
+  <url>
+    <loc>https://salesucation.ca/en/japan/index.html</loc>
+  </url>
+  <url>
+    <loc>https://salesucation.ca/en/about/index.html</loc>
+  </url>
+  <url>
+    <loc>https://salesucation.ca/en/pamphlet/index.html</loc>
+  </url>
+  <url>
+    <loc>https://salesucation.ca/en/index.html</loc>
+  </url>
+</urlset>
