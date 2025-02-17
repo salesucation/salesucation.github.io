@@ -3,6 +3,7 @@ import os
 import shutil
 import json
 import xml.etree.ElementTree as ET
+import urllib.parse;
 
 client = app.test_client();
 
@@ -31,7 +32,7 @@ for page in pages:
 fin = open(f"{os.getcwd()}/package.json")
 oPackage = json.load(fin)
 fin.close()
-XML = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset>';
+XML = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
 for url in sitemap["urlset"]:
     XML += f"<url><loc>{oPackage["homepage"]}{url["url"]["loc"]}</loc></url>"
 XML += "</urlset>"
@@ -39,4 +40,8 @@ element = ET.XML(XML)
 ET.indent(element)
 f = open(f"{os.getcwd()}/dist/sitemap.xml", "w")
 f.write(ET.tostring(element, encoding='unicode'))
+f.close()
+parsed_url = urllib.parse.urlparse(oPackage["homepage"])
+f = open(f"{os.getcwd()}/dist/CNAME", "w")
+f.write(parsed_url.netloc)
 f.close()
