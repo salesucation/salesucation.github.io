@@ -12,12 +12,12 @@
     try{
         const sLang = navigator.language.substring(0,2);
         if(languages.includes(sLang)){
-            window.location.replace(`${sLang}/404`);
+            window.location.replace(`/${sLang}/404`);
         }else{
             throw new Exception("unsupported language");
         }
     }catch{
-        window.location.replace("fr/404");
+        window.location.replace("/fr/404");
     }
     
 </script>
