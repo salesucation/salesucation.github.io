@@ -5,14 +5,16 @@ export default function({children}){
   <nav role="menu">
 			<label data-role="burger"><input type="checkbox" /></label>
 			<ul role="menubar">
-				<li><strong>Acme Corp</strong></li>
+				<li><strong>salesucation</strong></li>
 			</ul>
-      <ul>
-        <li>
-          
-        </li>
-      </ul>
 			<ul role="menuitem">
+        <li>
+        <form role="search" method="get" action="https://wpico.mwm/">
+              <input name="s" type="search" placeholder="Search" />
+              <input type="submit" value="Search" />
+            </form>          
+
+        </li>
 				<li><a href="#">About</a></li>
 				<li><a href="#">Contact</a></li>
 			</ul>
