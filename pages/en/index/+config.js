@@ -1,3 +1,6 @@
+import Layout from "./LayoutIndex"
+
 export default {
-title: 'Index', description: 'test mdx', name:'Rich' 
+    Layout,
+title: 'Index', description: 'test mdx' 
 }
