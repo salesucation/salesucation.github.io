@@ -3,7 +3,7 @@
   $theme-color: "sand",
   $semantic-root-element: "#root",
   $enable-semantic-container: true,
-  $enable-classes: false
+  $enable-classes: true
 );
 
 /*******************************************************************************
@@ -140,3 +140,15 @@
     }
   }
   
+  .hero{
+    min-height: 10rem;
+  }
+
+  .hero button{
+    float: right;
+    margin-top: 1.5rem;
+  }
+
+  main h2{
+    margin-top: 1.2em;
+  }
