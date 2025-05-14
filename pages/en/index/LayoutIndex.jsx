@@ -39,7 +39,7 @@ export default function ({ children }) {
         </article>
       </div>
       <h2>Our special sauce</h2>
-      <div class="grid">
+      <div className="grid">
         <article>
           <AutonomousComponents />
         </article>
