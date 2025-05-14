@@ -6,4 +6,5 @@ import vikeReact from "vike-react/config";
 export default {
   // https://vike.dev/head-tags
   extends: vikeReact,
+  prerender: true
 } 
