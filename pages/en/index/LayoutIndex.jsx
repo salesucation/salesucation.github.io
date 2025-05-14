@@ -3,7 +3,7 @@ import Maintenance from "./Maintenance.mdx";
 import Operations from "./Operations.mdx";
 import CDWordpress from "./CDWordpress.mdx";
 import Egress from "./Egress.mdx";
-import FullStack from "./FullStack.mdx";
+import AutonomousComponents from "./AutonomousComponents.mdx";
 export default function ({ children }) {
   return <>
     <header className="container">
@@ -41,16 +41,18 @@ export default function ({ children }) {
       <h2>Our special sauce</h2>
       <div class="grid">
         <article>
-          <CDWordpress />
+          <AutonomousComponents />
         </article>
         <article>
-          <FullStack />
+          <CDWordpress />
         </article>
         <article>
           <Egress />
         </article>
       </div>
       <h2>Articles</h2>
+      <figure></figure>
+      <h2>Featured Components</h2>
       <figure></figure>
     </main>
     <footer className="container">
