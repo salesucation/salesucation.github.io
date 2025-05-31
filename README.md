@@ -1,3 +1,3 @@
 # salesucation.github.io
 
-website for serverless plcs
+website for serverless plcs. Uses vike.mdx
