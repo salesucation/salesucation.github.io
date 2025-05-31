@@ -27,7 +27,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # run npm install, npm run build and publish to gh-pages
-      - uses: diy-pwa/npm-build-2-gh-pages@1.12
+      - uses: diy-pwa/npm-build-2-gh-pages@v1.12
         with:
           dist_folder: 'dist/client'
           github_token: ${{ secrets.GITHUB_TOKEN }}
