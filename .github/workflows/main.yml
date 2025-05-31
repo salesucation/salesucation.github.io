@@ -28,5 +28,6 @@ jobs:
     steps:
       # run npm install, npm run build and publish to gh-pages
       - uses: diy-pwa/npm-build-2-gh-pages@v1.11
-        with: 
+        with:
+          dist_folder: 'dist/client'
           github_token: ${{ secrets.GITHUB_TOKEN }}
